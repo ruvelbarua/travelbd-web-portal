@@ -1,0 +1,82 @@
+[
+    {
+        "key": 101,
+        "place": "Cox's Bazer",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "imgs/coxsbazer.jpg"
+    },
+    {
+        "key": 102,
+        "place": "Saintmartin",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "imgs/santmartin.jpg"
+    },
+    {
+        "key": 103,
+        "place": "Bandarban",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "imgs/bandarban.jpg"
+    },
+    {
+        "key": 104,
+        "place": "Chattogram",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "imgs/chattogram.jpg"
+    },
+    {
+        "key": 105,
+        "place": "Rangamati",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "img/rangamati.jpg"
+    },
+    {
+        "key": 106,
+        "place": "Khagrachori",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "imgs/khagrachori.jpg"
+    },
+    {
+        "key": 107,
+        "place": "Kuakata",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "imgs/kuakata.jpg"
+    },
+    {
+        "key": 108,
+        "place": "Sylhet",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "img/sylhet.jpg"
+    },
+    {
+        "key": 109,
+        "place": "Dhaka",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "img/dhaka.jpg"
+    },
+    {
+        "key": 110,
+        "place": "Sundarban",
+        "package": "...",
+        "description": "Lorem ipsum.......",
+        "day": "...",
+        "img": "sundarban.jpg"
+    }
+]
