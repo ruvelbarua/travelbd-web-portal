@@ -13,7 +13,10 @@ import Home from './components/Home/Home';
 import ManageOrder from './components/ManageOrder/ManageOrder';
 import MyOrder from './components/MyOrder/MyOrder';
 import NotFound from './components/NotFound/NotFound';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import initializeFirebase from './components/Firebase/firebase.init';
 
+initializeFirebase();
 function App() {
   return (
     <div className="App">
@@ -31,6 +34,9 @@ function App() {
           </Route>
           <Route exact path="/service">
             <Service></Service>
+          </Route>
+          <Route path="/sdetails/:id">
+            <ServiceDetails></ServiceDetails>
           </Route>
           <Route exact path="/morder">
             <ManageOrder></ManageOrder>

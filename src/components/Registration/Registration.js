@@ -2,6 +2,9 @@ import React from 'react';
 import './Registration.css';
 import regeimg from '../Pic/img1.jpg';
 import { Form, Button, NavLink } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+
 
 const Registration = () => {
     return (
@@ -39,10 +42,13 @@ const Registration = () => {
                                         <Form.Label>Password</Form.Label>
                                         <Form.Control type="password" placeholder="Password" />
                                     </Form.Group>
-                                    <Button variant="primary" type="submit">
+                                    <Button onClick="/login" variant="primary" type="submit">
                                         Register
                                     </Button>
-                                    <NavLink> Registared: Login</NavLink>
+                                    <NavLink> Registared:<Link to="/login">Please Login</Link>
+                                    </NavLink>
+
+
                                 </Form>
                             </div>
                         </div>

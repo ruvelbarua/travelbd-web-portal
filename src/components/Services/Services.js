@@ -5,7 +5,7 @@ import './Services.css';
 const Services = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        fetch('toursdata.json')
+        fetch('/toursdata.json')
             .then(res => res.json())
             .then(data => setServices(data));
     }, [])

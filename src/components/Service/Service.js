@@ -1,9 +1,17 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
-    const { key, place, day, price, description, img } = service;
+    const { key, place, day, price, description, img } = service || {};
+
+    const history = useHistory();
+
+    const handleDetails = (key) => {
+        const uri = `/sdetails/${key}`
+        history.push(uri)
+    }
+
     return (
         <div className="service pb-3">
             <img src={img} alt="" />
@@ -11,9 +19,7 @@ const Service = ({ service }) => {
             <h5>Day: {day}</h5>
             <h5>Price: {price}</h5>
             <p className="px-3">{description}</p>
-            <Link to={`/booking/${key}`}>
-                <button className="btn btn-warning">Book {place.toLowerCase()}</button>
-            </Link>
+            <button className="btn btn-warning" onClick={() => handleDetails(key)}>Details</button>
         </div>
     );
 };
