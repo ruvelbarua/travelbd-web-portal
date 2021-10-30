@@ -32,7 +32,6 @@ const NabVar = () => {
                     <Navbar.Brand>
                         <Button as={HashLink} to="/login" variant="outline-warning"> Login</Button>
                     </Navbar.Brand>
-                    {/* <Navbar.Toggle /> */}
                 </Navbar.Collapse>
             </Container>
         </Navbar>
