@@ -5,7 +5,6 @@ import { Form, Button, NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-
 const Registration = () => {
     return (
         <div className="container-fluid d-flex my-3 m-5">
@@ -25,22 +24,22 @@ const Registration = () => {
                                 <Form>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Full Name</Form.Label>
-                                        <Form.Control type="name" placeholder="Enter Name" />
+                                        <Form.Control type="name" placeholder="Enter Name" required />
                                         <Form.Text className="text-muted">
                                             Please Enter Your Full Name
                                         </Form.Text>
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Contact Number</Form.Label>
-                                        <Form.Control type="name" placeholder="Contact Number" />
+                                        <Form.Control type="name" placeholder="Contact Number" required />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Your Email</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter email" />
+                                        <Form.Control type="email" placeholder="Enter email" required />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicPassword">
                                         <Form.Label>Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Password" />
+                                        <Form.Control type="password" placeholder="Password" required />
                                     </Form.Group>
                                     <Button onClick="/login" variant="primary" type="submit">
                                         Register

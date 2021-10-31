@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
 import Dpic from '../Pic/sbimg.jpg';
+import './ServiceDetails.css';
 
 const ServiceDetails = () => {
     const { id } = useParams()
@@ -27,15 +28,15 @@ const ServiceDetails = () => {
             <div className="text-success">
                 <h2>OUR PACKAGE INFORMATION</h2>
             </div>
-            <div className="row my-3">
+            <div className="row my-3 pkg-card">
                 <div className="col-md-8">
                     <img src={Dpic} alt="" />
                 </div>
                 <div className="col-md-4">
-                    <Card className="bg-primary border">
+                    <Card className="bg-light border">
                         <Card.Body>
                             <Card.Text>
-                                <h2>Visit:  {spacificServiceDetails.place}</h2>
+                                <h2>Package:  {spacificServiceDetails.place}</h2>
                             </Card.Text>
                         </Card.Body>
                         <Card.Img variant="top" src="" />

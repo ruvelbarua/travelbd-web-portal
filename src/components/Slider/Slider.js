@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import Simg1 from '../Pic/slider/fimg.jpg';
-import Simg2 from '../Pic/slider/coxesbazer.jpg';
+import Simg2 from '../Pic/slider/coxesbazer.jpeg';
 import Simg3 from '../Pic/slider/ctgcity.jpg';
 import Simg4 from '../Pic/slider/ctghil.jpg';
 import Simg5 from '../Pic/slider/dhkcity.jpg';

@@ -9,9 +9,8 @@ const useFirebase = () => {
     
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
-
+    
     const signInUsingGoogle = () => {
-        
     }
 
     // observe user state change
