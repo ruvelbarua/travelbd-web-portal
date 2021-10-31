@@ -15,6 +15,8 @@ import MyOrder from './components/MyOrder/MyOrder';
 import NotFound from './components/NotFound/NotFound';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import initializeFirebase from './components/Firebase/firebase.init';
+import AddUsers from './components/AddUsers/AddUsers';
+import Users from './components/Users/Users';
 initializeFirebase();
 function App() {
   return (
@@ -46,6 +48,13 @@ function App() {
           <Route exact path="/about">
             <About></About>
           </Route>
+          <Route exact path="/adduser">
+            <AddUsers></AddUsers>
+          </Route>
+          <Route exact path="/users">
+            <Users></Users>
+          </Route>
+
           <Route exact path="/register">
             <Registration></Registration>
           </Route>
