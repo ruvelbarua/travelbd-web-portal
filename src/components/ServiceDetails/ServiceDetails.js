@@ -10,7 +10,7 @@ const ServiceDetails = () => {
     const [spacificServiceDetails, setSpacificServiceDetails] = useState({})
 
     useEffect(() => {
-        fetch('/toursdata.json')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServiceDetails(data))
     }, [])
