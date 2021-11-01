@@ -12,9 +12,9 @@ const Home = () => {
     return (
         <div>
             <Slider></Slider>
-            <About></About>
             <Services></Services>
             <Registration></Registration>
+            <About></About>
             <ManageOrders></ManageOrders>
             <AddService></AddService>
             <AddUsers></AddUsers>

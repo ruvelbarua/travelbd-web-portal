@@ -15,7 +15,7 @@ const NabVar = () => {
                         <Button as={HashLink} to="/home" variant="outline-primary">Home</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="//services" variant="outline-primary">Services</Button>
+                        <Button as={HashLink} to="/services" variant="outline-primary">Services</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
                         <Button as={HashLink} to="/myorder" variant="outline-primary"> My Orders</Button>
