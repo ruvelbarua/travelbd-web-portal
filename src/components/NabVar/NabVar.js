@@ -1,24 +1,21 @@
 import React from 'react';
 import { Button, Container, Navbar } from 'react-bootstrap';
-import Logo1 from '../Pic/logom.jpg';
+import Logo1 from '../Pic/logom.png';
 import { HashLink } from 'react-router-hash-link';
 
 
 const NabVar = () => {
     return (
-        <Navbar>
-            <Navbar.Brand className="mx-5"><span><img src={Logo1} alt="" /></span></Navbar.Brand>
-
-            <Container>
+        <Navbar className="bg-light">
+            <Container className="className=" justify-content-center>
+                <Navbar.Brand className="mx-5 w-100%"><img src={Logo1} alt="" />
+                </Navbar.Brand>
                 <Navbar.Collapse >
                     <Navbar.Brand>
                         <Button as={HashLink} to="/home" variant="outline-primary">Home</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/services" variant="outline-primary">Services</Button>
-                    </Navbar.Brand>
-                    <Navbar.Brand>
-                        <Button as={HashLink} to="/morder" variant="outline-primary">Manage Orders</Button>
+                        <Button as={HashLink} to="//services" variant="outline-primary">Services</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
                         <Button as={HashLink} to="/myorder" variant="outline-primary"> My Orders</Button>

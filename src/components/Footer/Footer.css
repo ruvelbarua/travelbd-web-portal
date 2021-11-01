@@ -1,10 +1,12 @@
+.master-card{
+    width: 350px;
+    height: 120px;
+}
+.fimg-size{
+    width: 180px;
+    height: 160px;
+}
+
 .text-position{
-    margin-top: 490px;
-}
-.font-size{
-    font-size: 16px;
-    text-align:left;
-}
-.font-size2{
-    font-size: 20px;
+    text-align: center;
 }

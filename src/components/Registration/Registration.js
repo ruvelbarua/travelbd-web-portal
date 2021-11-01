@@ -1,13 +1,13 @@
 import React from 'react';
 import './Registration.css';
-import regeimg from '../Pic/img1.jpg';
 import { Form, Button, NavLink } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Banner from '../Banner/Banner';
 
 
 const Registration = () => {
     return (
-        <div className="container-fluid d-flex my-3 m-5">
+        <div className="container-flex my-3 m-5">
             <div className="">
                 <div className="my-3 text-center text-danger">
                     <h2>Registration Form</h2>
@@ -16,7 +16,7 @@ const Registration = () => {
                     <div className="row">
                         <div className="col-md-8 my-2">
                             <div className="my-2">
-                                <img className="image" src={regeimg} alt="" />
+                                <Banner></Banner>
                             </div>
                         </div>
                         <div className="col-md-4 p-5 container border  bg-light my-3">

@@ -39,7 +39,7 @@ const ServiceDetails = () => {
                                 <h2>Package:  {spacificServiceDetails.place}</h2>
                             </Card.Text>
                         </Card.Body>
-                        <Card.Img variant="top" src="" />
+                        <Card.Img variant="top" src={spacificServiceDetails.img} />
                         <Card.Body>
                             <Card.Text>
                                 <h4>Day:  {spacificServiceDetails.day}</h4>
