@@ -8,7 +8,7 @@ const AddUsers = () => {
         const email = emailRef.current.value;
 
         const newUser = { name, email };
-        fetch('http://localhost:5000/users', {
+        fetch('https://ghostly-shadow-96316.herokuapp.com/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

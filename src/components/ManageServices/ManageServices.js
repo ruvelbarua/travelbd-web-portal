@@ -9,7 +9,7 @@ const ManageServices = () => {
     }, []);
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/services${id}`;
+        const url = `https://ghostly-shadow-96316.herokuapp.com/services${id}`;
         fetch(url, {
             method: 'DELETE'
         })

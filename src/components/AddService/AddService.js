@@ -9,7 +9,7 @@ const AddService = () => {
     const onSubmit = data => {
         console.log(data);
 
-        axios.post('http://localhost:5000/services', data)
+        axios.post('https://ghostly-shadow-96316.herokuapp.com/services', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {
