@@ -1,3 +1,9 @@
+.add-service{
+    border: burlywood;
+    background-color: cadetblue;
+    align-items: center;
+}
+
 .add-service form{
     display: flex;
     flex-direction: column;

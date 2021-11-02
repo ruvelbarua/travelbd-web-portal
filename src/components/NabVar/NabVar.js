@@ -5,6 +5,7 @@ import { HashLink } from 'react-router-hash-link';
 
 
 const NabVar = () => {
+    // const {user, logout} = useAuth();
     return (
         <Navbar className="bg-light">
             <Container className="className=" justify-content-center>

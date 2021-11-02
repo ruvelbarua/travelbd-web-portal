@@ -10,7 +10,6 @@ import About from './components/About/About';
 import Registration from './components/Registration/Registration';
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
-import ManageOrder from './components/ManageOrders/ManageOrders';
 import MyOrder from './components/MyOrders/MyOrders';
 import NotFound from './components/NotFound/NotFound';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
@@ -19,6 +18,12 @@ import AddUsers from './components/AddUsers/AddUsers';
 import Users from './components/Users/Users';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AuthProvider from './components/Context/AuthProvider';
+import AddService from './components/AddService/AddService';
+import Booking from './components/Booking/Booking';
+import ManageServices from './components/ManageServices/ManageServices';
+import Banner from './components/Banner/Banner';
+
+
 initializeFirebase();
 function App() {
   return (
@@ -39,12 +44,19 @@ function App() {
             <Route exact path="/service">
               <Service></Service>
             </Route>
-            <PrivateRoute path="/sdetails/:id">
+            <Route path="/sdetails/:id">
               <ServiceDetails></ServiceDetails>
-            </PrivateRoute>
-            <Route exact path="/morder">
-              <ManageOrder></ManageOrder>
             </Route>
+            <Route exact path="/addService">
+              <AddService></AddService>
+            </Route>
+            <Route exact path="/booking/:serviceId">
+              <Booking></Booking>
+            </Route>
+            <Route exact path="/manageServices">
+              <ManageServices></ManageServices>
+            </Route>
+
             <Route exact path="/myorder">
               <MyOrder></MyOrder>
             </Route>
@@ -59,6 +71,9 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Registration></Registration>
+            </Route>
+            <Route exact path="/banner">
+              <Banner></Banner>
             </Route>
             <Route exact path="/login">
               <Login></Login>

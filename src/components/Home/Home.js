@@ -2,7 +2,6 @@ import React from 'react';
 import About from '../About/About';
 import AddService from '../AddService/AddService';
 import AddUsers from '../AddUsers/AddUsers';
-import ManageOrders from '../ManageOrders/ManageOrders';
 import MyOrders from '../MyOrders/MyOrders';
 import Registration from '../Registration/Registration';
 import Services from '../Services/Services';
@@ -15,7 +14,6 @@ const Home = () => {
             <Services></Services>
             <Registration></Registration>
             <About></About>
-            <ManageOrders></ManageOrders>
             <AddService></AddService>
             <AddUsers></AddUsers>
         </div>

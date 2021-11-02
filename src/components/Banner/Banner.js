@@ -6,17 +6,9 @@ import "./Banner.css";
 const Banner = () => {
     return (
         <div>
-            <Card className="bg-dark text-white">
-                <Card.Img className="bnr-size" src={bnrimg} alt="Card image" />
-                <Card.ImgOverlay>
-                    <Card.Title>
-
-                    </Card.Title>
-                    <Card.Text>
-
-                    </Card.Text>
-                </Card.ImgOverlay>
-            </Card>
+            <div className="bg-dark text-white bnr-size">
+                <img src={bnrimg} alt="" />
+            </div>
         </div>
     );
 };

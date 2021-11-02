@@ -1,25 +1,20 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Service.css';
 
 const Service = ({ service }) => {
-    const { key, place, day, description, img } = service || {};
-
-    const history = useHistory();
-
-    const handleDetails = (key) => {
-        const uri = `/sdetails/${key}`
-        history.push(uri)
-    }
-
+    const { _id, place, price, day, description, img } = service;
     return (
-        <div className="service">
+        <div className="service pb-3">
             <img src={img} alt="" />
             <h3>{place}</h3>
-            <h5>Day: {day}</h5>
+            <h5>{day}</h5>
+            <h5>Price:{price}</h5>
             <p className="px-3">{description}</p>
-            <button className="btn btn-warning" onClick={() => handleDetails(key)}>Details</button>
-        </div>
+            <Link to={`/booking/${_id}`}>
+                <button className="btn btn-warning">Book {place}</button>
+            </Link>
+        </div >
     );
 };
 

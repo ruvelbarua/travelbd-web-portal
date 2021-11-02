@@ -10,7 +10,7 @@ const ServiceDetails = () => {
     const [spacificServiceDetails, setSpacificServiceDetails] = useState({})
 
     useEffect(() => {
-        fetch('https://ghostly-shadow-96316.herokuapp.com/services')
+        fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServiceDetails(data))
     }, [])
@@ -50,7 +50,7 @@ const ServiceDetails = () => {
                             <Card.Text>
                                 <h4>Price:  {spacificServiceDetails.price}</h4>
                             </Card.Text>
-                            <Button variant="danger">Booking Now</Button>
+                            <Button variant="danger">Book Now</Button>
                         </Card.Body>
                     </Card>
                 </div>
