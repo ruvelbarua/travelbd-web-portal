@@ -46,8 +46,6 @@ const Registration = () => {
                                     </Button>
                                     <NavLink> Registared:<Link to="/login">Please Login</Link>
                                     </NavLink>
-
-
                                 </Form>
                             </div>
                         </div>

@@ -50,13 +50,12 @@ function App() {
             <Route exact path="/addService">
               <AddService></AddService>
             </Route>
-            <Route exact path="/booking/:serviceId">
+            <PrivateRoute exact path="/booking/:serviceId">
               <Booking></Booking>
-            </Route>
-            <Route exact path="/manageServices">
+            </PrivateRoute>
+            <Route exact path="/mServices">
               <ManageServices></ManageServices>
             </Route>
-
             <Route exact path="/myorder">
               <MyOrder></MyOrder>
             </Route>

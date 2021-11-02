@@ -6,16 +6,36 @@ const ManageServices = () => {
         fetch('http://localhost:5000/services')
             .then(res => res.json())
             .then(data => setServices(data))
-    }, [])
+    }, []);
+
+    const handleDelete = id => {
+        const url = `http://localhost:5000/services${id}`;
+        fetch(url, {
+            method: 'DELETE'
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount) {
+                    alert('Successfully Deleted')
+                    const remaining = services.filter(service => service._id !== id);
+                    setServices(remaining);
+                }
+
+            })
+    }
     return (
-        <div>
+        <div className="container">
             <h2>This is Manage Services</h2>
-            {
-                services.map(service => <div key={service._id}>
-                    <h3>{service.place}</h3>
-                    <button>Delete</button>
-                </div>)
-            }
+            <div className="row">
+                {
+                    services.map(service => <div key={service._id} className="col-md-3 border bg-light p-5">
+                        <h3>{service.place}</h3>
+                        <button onClick={() => handleDelete(service._id)}>Delete</button>
+                    </div>)
+                }
+
+            </div>
+
         </div>
     );
 };
