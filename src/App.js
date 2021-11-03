@@ -22,6 +22,7 @@ import AddService from './components/AddService/AddService';
 import Booking from './components/Booking/Booking';
 import ManageServices from './components/ManageServices/ManageServices';
 import Banner from './components/Banner/Banner';
+import Admin from './components/Admin/Admin';
 
 
 initializeFirebase();
@@ -62,6 +63,9 @@ function App() {
             <Route exact path="/about">
               <About></About>
             </Route>
+            <PrivateRoute exact path="/admin">
+              <Admin></Admin>
+            </PrivateRoute>
             <Route exact path="/adduser">
               <AddUsers></AddUsers>
             </Route>
