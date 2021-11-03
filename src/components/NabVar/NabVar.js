@@ -9,7 +9,7 @@ const NabVar = () => {
     return (
         <Navbar className="bg-light">
             <Container className="className=" justify-content-center>
-                <Navbar.Brand className="mx-5 w-100%"><img src={Logo1} alt="" />
+                <Navbar.Brand className="mx-1 w-100%"><img src={Logo1} alt="" />
                 </Navbar.Brand>
                 <Navbar.Collapse >
                     <Navbar.Brand>
@@ -20,6 +20,9 @@ const NabVar = () => {
                     </Navbar.Brand>
                     <Navbar.Brand>
                         <Button as={HashLink} to="/myorder" variant="outline-primary"> My Orders</Button>
+                    </Navbar.Brand>
+                    <Navbar.Brand>
+                        <Button as={HashLink} to="/addService" variant="outline-primary"> Add Service</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
                         <Button as={HashLink} to="/about" variant="outline-primary"> About</Button>

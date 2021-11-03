@@ -1,11 +1,29 @@
 import React from 'react';
-import './Registration.css';
 import { Form, Button, NavLink } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
+import './Registration.css';
 import Banner from '../Banner/Banner';
 
 
 const Registration = () => {
+
+    const { signInWithGoogle, setUser } = useAuth();
+
+    const history = useHistory()
+    const location = useLocation()
+
+    const url = location.state?.from || "/home"
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then((res) => {
+                setUser(res.user)
+                history.push(url)
+            })
+            .catch((err) => console.log(err));
+    };
+
     return (
         <div className="container-flex my-3 m-5">
             <div className="">
@@ -41,10 +59,10 @@ const Registration = () => {
                                         <Form.Label>Password</Form.Label>
                                         <Form.Control type="password" placeholder="Password" required />
                                     </Form.Group>
-                                    <Button onClick="/login" variant="primary" type="submit">
+                                    <Button onClick={handleGoogleLogin} variant="primary" type="submit">
                                         Register
                                     </Button>
-                                    <NavLink> Registared:<Link to="/login">Please Login</Link>
+                                    <NavLink> Alredy Registred:<Link to="/login">Please Login</Link>
                                     </NavLink>
                                 </Form>
                             </div>

@@ -1,7 +1,9 @@
 .add-service{
     border: burlywood;
-    background-color: cadetblue;
-    align-items: center;
+    background-color: lightblue;
+    width: 610px;
+    height: 470px;
+    margin-left: 410px;
 }
 
 .add-service form{
@@ -12,6 +14,6 @@
 
 }
 .add-service form input, textarea{
-    width: 40%;
-    margin-bottom: 10px;
+    width: 70%;
+    margin-bottom: 30px;
 }

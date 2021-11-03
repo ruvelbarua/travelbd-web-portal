@@ -27,7 +27,7 @@ const Booking = () => {
                             <h5>OUR PACKAGE INFORMATION</h5>
                         </div>
                         <img src={service.place} alt="" />
-                        <h4 className="text-warning"> Dhaka-{service.place}-Dhaka</h4>
+                        <h4 className="text-place"> Dhaka-{service.place}-Dhaka</h4>
                         <h3>Package: {service.day}</h3>
                         <h5>Total Price: {service.price}</h5>
                         <p>Person: Single</p>

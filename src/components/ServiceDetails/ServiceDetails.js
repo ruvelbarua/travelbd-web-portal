@@ -45,9 +45,6 @@ const ServiceDetails = () => {
                                 <h4>Day:  {spacificServiceDetails.day}</h4>
                             </Card.Text>
                             <Card.Text>
-                                <h4>Person:  {spacificServiceDetails.person}</h4>
-                            </Card.Text>
-                            <Card.Text>
                                 <h4>Price:  {spacificServiceDetails.price}</h4>
                             </Card.Text>
                             <Button variant="danger">Book Now</Button>

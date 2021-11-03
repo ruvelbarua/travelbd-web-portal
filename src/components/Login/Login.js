@@ -1,36 +1,32 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import initializeFirebase from '../Firebase/firebase.init';
-import { getAuth, GoogleAuthProvider, signInWithPopup, } from "firebase/auth";
+import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import useAuth from '../Hooks/useAuth';
 import './Login.css';
 
-initializeFirebase();
-const provider = new GoogleAuthProvider();
-
 const Login = () => {
-    const auth = getAuth();
-    const [user, setUser] = useState({});
+    const { signInWithGoogle, setUser } = useAuth();
+
+    const history = useHistory()
+    const location = useLocation()
+
+    const url = location.state?.from || "/home"
+
     const handleGoogleLogin = () => {
-        signInWithPopup(auth, provider)
-            .then((result) => {
-                const { displayName, photoURL, email } = result.user;
-                const userInfo = {
-                    name: displayName,
-                    email: email,
-                    photo: photoURL,
-                };
-                setUser(userInfo);
-            });
-    }
+        signInWithGoogle()
+            .then((res) => {
+                setUser(res.user)
+                history.push(url)
+            })
+            .catch((err) => console.log(err));
+    };
+
     return (
         <div className="my-5">
             <div className="container">
                 <Card className="card-login" border="info" style={{ width: '25rem', height: '20rem' }}>
                     <Card.Header><h2 className="text-primary">Please Login</h2></Card.Header>
                     <Card.Body className="my-5">
-                        <Card.Title><h4>{user.name}</h4></Card.Title>
-                        <Card.Title><h4>{user.email}</h4></Card.Title>
                         <Card.Text>
                             <button onClick={handleGoogleLogin} className="btn btn-danger">Google Sign In</button>
                         </Card.Text>
