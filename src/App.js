@@ -21,7 +21,6 @@ import AuthProvider from './components/Context/AuthProvider';
 import AddService from './components/AddService/AddService';
 import Booking from './components/Booking/Booking';
 import ManageServices from './components/ManageServices/ManageServices';
-import Banner from './components/Banner/Banner';
 import Admin from './components/Admin/Admin';
 
 
@@ -74,9 +73,6 @@ function App() {
             </Route>
             <Route exact path="/register">
               <Registration></Registration>
-            </Route>
-            <Route exact path="/banner">
-              <Banner></Banner>
             </Route>
             <Route exact path="/login">
               <Login></Login>
