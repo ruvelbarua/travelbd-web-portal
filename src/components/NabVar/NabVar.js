@@ -7,9 +7,9 @@ import { HashLink } from 'react-router-hash-link';
 const NabVar = () => {
     // const {user, logout} = useAuth();
     return (
-        <Navbar className="bg-light">
+        <Navbar collapseOnSelect expand="lg" className="bg-light">
             <Container className="className=" justify-content-center>
-                <Navbar.Brand className="mx-1 w-100%"><img src={Logo1} alt="" />
+                <Navbar.Brand className="w-100%"><img src={Logo1} alt="" />
                 </Navbar.Brand>
                 <Navbar.Collapse >
                     <Navbar.Brand>

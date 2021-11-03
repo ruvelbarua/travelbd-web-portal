@@ -42,7 +42,8 @@ const Footer = () => {
                             <img className="fimg-size" src={Fimg} alt="" />
                         </div>
                         <div className="text-light">
-                            <p>Design By: Ruvel Barua. <br />Thanks by: Programming Hero Team</p>
+                            <p>Design By: Ruvel Barua. <br />Email: ruvel.br78@gmail.com<br />Thanks by: Programming Hero Team
+                            </p>
                         </div>
                     </div>
                 </div>
