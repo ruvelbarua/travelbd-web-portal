@@ -4,7 +4,7 @@ import ManageServices from '../ManageServices/ManageServices';
 const MyOrder = () => {
     return (
         <div>
-            <h2>This is My Order</h2>
+            <h2 className="text-primary">My Booking</h2>
             <ManageServices></ManageServices>
         </div>
     );

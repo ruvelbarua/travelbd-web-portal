@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
+import './ManageServices.css';
 
 const ManageServices = () => {
     const [services, setServices] = useState([])
@@ -25,12 +27,15 @@ const ManageServices = () => {
     }
     return (
         <div className="container my-5">
-            <h2 className="text-danger">This is Manage Services</h2>
+            <h2 className="text-success">Manage Services</h2>
             <div className="row">
                 {
-                    services.map(service => <div key={service._id} className="col-md-3 border bg-light p-5">
+                    services.map(service => <div key={service._id} className="col-md-3 bg-light border p-3">
+                        <div className="">
+                            <img src={service.img} alt="" />
+                        </div>
                         <h3>{service.place}</h3>
-                        <button onClick={() => handleDelete(service._id)}>Delete</button>
+                        <Button onClick={() => handleDelete(service._id)} variant="danger">Delete</Button>
                     </div>)
                 }
 

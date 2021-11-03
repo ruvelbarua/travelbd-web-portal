@@ -1,4 +1,6 @@
 import React, { useRef } from 'react';
+import { Button, FormControl, InputGroup } from 'react-bootstrap';
+import './AddUsers.css';
 
 const AddUsers = () => {
     const nameRef = useRef();
@@ -26,14 +28,15 @@ const AddUsers = () => {
     }
 
     return (
-        <div>
-            <h2>Please Add User Information</h2>
+        <div className="bg-light border p-5 card-design">
+            <h2 className="text-success">Please Add User Information</h2>
             <form onSubmit={handleAddUser}>
-                <input type="text" placeholder="name" ref={nameRef} />
+                <InputGroup.Text>Full Name</InputGroup.Text>
+                <FormControl aria-label="Enter your name" ref={nameRef} />
+                <InputGroup.Text>Email</InputGroup.Text>
+                <FormControl aria-label="Enter your email" ref={emailRef} />
                 <br /><br />
-                <input type="email" placeholder="email" ref={emailRef} />
-                <br /><br />
-                <input type="submit" value="Add" />
+                <Button type="submit" value="Add" variant="primary">ADD</Button>
             </form>
         </div>
     );

@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React from 'react';
+import { Button } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import './AddService.css';
 
@@ -28,8 +29,10 @@ const AddService = () => {
                 <textarea {...register("description")} Placeholder="description" />
                 <input type="number" {...register("price")} Placeholder="price" />
                 <input {...register("img")} Placeholder="image url" />
-                <input type="submit" />
+                {/* <input className="bg-light text-danger" type="submit" /> */}
+                <Button type="submit" variant="primary">Submit</Button>
             </form>
+            <br />
         </div>
     );
 };

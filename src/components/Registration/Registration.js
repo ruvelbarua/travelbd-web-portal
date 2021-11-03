@@ -19,8 +19,8 @@ const Registration = () => {
                                 <Banner></Banner>
                             </div>
                         </div>
-                        <div className="col-md-4 p-5 container border  bg-light my-3">
-                            <div>
+                        <div className="col-md-4 p-5 container border  bg-light my-3 form-design">
+                            <div className="">
                                 <Form>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Full Name</Form.Label>

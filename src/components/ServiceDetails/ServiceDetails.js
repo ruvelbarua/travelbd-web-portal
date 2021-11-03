@@ -17,7 +17,7 @@ const ServiceDetails = () => {
 
     useEffect(() => {
         if (serviceDetails.length > 0) {
-            const matchedData = serviceDetails.find(detail => detail.key == id)
+            const matchedData = serviceDetails.find(detail => detail.key !== id)
             setSpacificServiceDetails(matchedData);
         }
 
