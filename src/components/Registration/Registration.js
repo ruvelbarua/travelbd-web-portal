@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Button, NavLink } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
@@ -8,20 +8,57 @@ import Banner from '../Banner/Banner';
 
 const Registration = () => {
 
-    const { signInWithGoogle, setUser } = useAuth();
+    const { signInWithGoogle, updateName, createAccountWithGoogle, setUser, setIsLoading } = useAuth();
 
     const history = useHistory()
     const location = useLocation()
-
     const url = location.state?.from || "/home"
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+
+    const handleGetName = (e) => {
+        setName(e.target.value)
+    }
+    const handleGetEmail = (e) => {
+        setEmail(e.target.value)
+    }
+    const handleGetPassword = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleRegistration = (e) => {
+        e.preventDefault();
+        createAccountWithGoogle(email, password)
+            .then((res) => {
+                setIsLoading(true)
+                updateName(name)
+                setUser(res.user);
+                history.push(url)
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+
+            })
+            .finally(() => {
+                setIsLoading(false)
+            })
+    };
+
 
     const handleGoogleLogin = () => {
         signInWithGoogle()
             .then((res) => {
+                setIsLoading(true)
                 setUser(res.user)
                 history.push(url)
             })
-            .catch((err) => console.log(err));
+            .catch((err) => console.log(err))
+            .finally(() => {
+                setIsLoading(false)
+            })
     };
 
     return (
@@ -39,32 +76,32 @@ const Registration = () => {
                         </div>
                         <div className="col-md-4 p-5 container border  bg-light my-3 form-design">
                             <div className="">
-                                <Form>
+                                <Form onSubmit={handleRegistration}>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Full Name</Form.Label>
-                                        <Form.Control type="name" placeholder="Enter Name" required />
+                                        <Form.Control type="name" onBlur={handleGetName} placeholder="Enter Name" required />
                                         <Form.Text className="text-muted">
                                             Please Enter Your Full Name
                                         </Form.Text>
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                                        <Form.Label>Contact Number</Form.Label>
-                                        <Form.Control type="name" placeholder="Contact Number" required />
-                                    </Form.Group>
-                                    <Form.Group className="mb-3" controlId="formBasicEmail">
                                         <Form.Label>Your Email</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter email" required />
+                                        <Form.Control type="email" onBlur={handleGetEmail} placeholder="Enter email" required />
                                     </Form.Group>
                                     <Form.Group className="mb-3" controlId="formBasicPassword">
                                         <Form.Label>Password</Form.Label>
-                                        <Form.Control type="password" placeholder="Password" required />
+                                        <Form.Control type="password"
+                                            onBlur={handleGetPassword}
+                                            placeholder="Password" required />
+                                        <button className="bg-warning" type="submit"> Submit</button>
                                     </Form.Group>
-                                    <Button onClick={handleGoogleLogin} variant="primary" type="submit">
-                                        Register
-                                    </Button>
+
                                     <NavLink> Alredy Registred:<Link to="/login">Please Login</Link>
                                     </NavLink>
                                 </Form>
+                                <Button onClick={handleGoogleLogin} variant="primary" type="submit">
+                                    Register
+                                </Button>
                             </div>
                         </div>
                     </div>

@@ -1,10 +1,13 @@
 import React from 'react';
-import { Container, Navbar, Button } from 'react-bootstrap';
+import { Container, Navbar, Button, ButtonGroup, DropdownButton, Dropdown } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
+import useAuth from '../Hooks/useAuth';
 import Logo1 from '../Pic/logom.png';
 import './Header.css';
 
 const Header = () => {
+    const { user, logOut } = useAuth()
+    console.log(user)
     return (
         // const {user, logout} = useAuth();
         <Navbar collapseOnSelect expand="lg" className="bg-light">
@@ -28,11 +31,22 @@ const Header = () => {
                         <Button as={HashLink} to="/about" variant=""> About</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/login" variant=""> Login</Button>
+                        <ButtonGroup>
+                            {
+                                user?.displayName ?
+                                    <Button onClick={logOut} variant=""> Log Out</Button>
+                                    :
+                                    <DropdownButton as={ButtonGroup} title="User" id="dropdown">
+                                        <Dropdown.Item as={HashLink} to="/login" eventKey="1">Login</Dropdown.Item>
+                                        <Dropdown.Item as={HashLink} to="/register" eventKey="2">Register</Dropdown.Item>
+                                    </DropdownButton>
+                            }
+                            <h6>Name:{user?.displayName}</h6>
+                        </ButtonGroup>
                     </Navbar.Brand>
                 </Navbar.Collapse>
             </Container>
-        </Navbar>
+        </Navbar >
     );
 };
 
