@@ -13,25 +13,22 @@ const Header = () => {
                 </Navbar.Brand>
                 <Navbar.Collapse >
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/home" variant="outline-primary">Home</Button>
+                        <Button as={HashLink} to="/home" variant="">Home</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/services" variant="outline-primary">Pakages</Button>
+                        <Button as={HashLink} to="/services" variant="">Pakages</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/myorder" variant="outline-primary"> My Orders</Button>
+                        <Button as={HashLink} to="/myorder" variant=""> My Orders</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/admin" variant="outline-primary"> Admin</Button>
+                        <Button as={HashLink} to="/admin" variant=""> Admin</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/about" variant="outline-primary"> About</Button>
+                        <Button as={HashLink} to="/about" variant=""> About</Button>
                     </Navbar.Brand>
                     <Navbar.Brand>
-                        <Button as={HashLink} to="/register" variant="outline-success"> Register</Button>
-                    </Navbar.Brand>
-                    <Navbar.Brand>
-                        <Button as={HashLink} to="/login" variant="outline-warning"> Login</Button>
+                        <Button as={HashLink} to="/login" variant=""> Login</Button>
                     </Navbar.Brand>
                 </Navbar.Collapse>
             </Container>
