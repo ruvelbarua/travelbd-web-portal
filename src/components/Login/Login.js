@@ -26,8 +26,8 @@ const Login = () => {
 
         loginWithEmailAndPassword(email, password)
             .then((res) => {
-                // setIsLoading(true)
-                // setUser(res.user);
+                setIsLoading(true)
+                setUser(res.user);
                 console.log(res.user)
                 history.push(url)
             })
