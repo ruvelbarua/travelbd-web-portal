@@ -99,7 +99,7 @@ const Registration = () => {
                                     </NavLink>
                                 </Form>
                                 <Button onClick={handleGoogleLogin} variant="primary" type="submit">
-                                    Register
+                                    GLogin
                                 </Button>
                             </div>
                         </div>
