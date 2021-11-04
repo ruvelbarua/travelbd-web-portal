@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, NavLink } from 'react-bootstrap';
+import { Form, Button, NavLink, ButtonGroup } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import './Registration.css';
@@ -93,9 +93,8 @@ const Registration = () => {
                                         <Form.Control type="password"
                                             onBlur={handleGetPassword}
                                             placeholder="Password" required />
-                                        <button className="bg-warning" type="submit"> Submit</button>
+                                        <Button className="my-3" variant="warning" type="submit"> Submit</Button>
                                     </Form.Group>
-
                                     <NavLink> Alredy Registred:<Link to="/login">Please Login</Link>
                                     </NavLink>
                                 </Form>
