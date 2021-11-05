@@ -7,7 +7,7 @@ const NewUser = () => {
     const onSubmit = data => console.log(data);
 
     return (
-        <div>
+        <div className="text-center">
             <h2>Thi is AddUser</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
 

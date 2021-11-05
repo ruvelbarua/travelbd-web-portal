@@ -11,7 +11,7 @@ const ManageServices = () => {
     }, []);
 
     const handleDelete = id => {
-        const url = `https://ghostly-shadow-96316.herokuapp.com/services${id}`;
+        const url = `https://ghostly-shadow-96316.herokuapp.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -34,7 +34,8 @@ const ManageServices = () => {
                         <div className="">
                             <img src={service.img} alt="" />
                         </div>
-                        <h3>{service.place}</h3>
+                        <h3>Place:{service.place}</h3>
+                        <p>Pakage:{service.day}</p>
                         <Button onClick={() => handleDelete(service._id)} variant="danger">Delete</Button>
                     </div>)
                 }
