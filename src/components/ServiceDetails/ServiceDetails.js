@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import Dpic from '../Pic/sbimg.jpg';
 import './ServiceDetails.css';
 
 const ServiceDetails = () => {
@@ -10,7 +9,7 @@ const ServiceDetails = () => {
     const [spacificServiceDetails, setSpacificServiceDetails] = useState({})
 
     useEffect(() => {
-        fetch('https://ghostly-shadow-96316.herokuapp.com/services')
+        fetch(`https://ghostly-shadow-96316.herokuapp.com/services`)
             .then(res => res.json())
             .then(data => setServiceDetails(data))
     }, [])
@@ -24,30 +23,27 @@ const ServiceDetails = () => {
     }, [serviceDetails])
 
     return (
-        <div className="container-fluid my-5">
-            <div className="text-success">
-                <h2>OUR PACKAGE INFORMATION</h2>
-            </div>
-            <div className="row my-3 pkg-card">
-                <div className="col-md-8">
-                    <img src={Dpic} alt="" />
-                </div>
-                <div className="col-md-4">
+        <div className="container-fluid">
+            <div className="my-3 pkg-card">
+                <div className="container">
                     <Card className="bg-light border">
                         <Card.Body>
                             <Card.Text>
-                                <h2>Package:  {spacificServiceDetails.place}</h2>
+                                <h3>Place:{spacificServiceDetails?.place}</h3>
                             </Card.Text>
                         </Card.Body>
-                        <Card.Img variant="top" src={spacificServiceDetails.img} />
+                        <Card.Img variant="top" src={spacificServiceDetails?.img} />
                         <Card.Body>
                             <Card.Text>
-                                <h4>Day:  {spacificServiceDetails.day}</h4>
+                                <h4>Day:  {spacificServiceDetails?.day}</h4>
                             </Card.Text>
                             <Card.Text>
-                                <h4>Price:  {spacificServiceDetails.price}</h4>
+                                <h4>Price:  {spacificServiceDetails?.price}</h4>
                             </Card.Text>
-                            <Button variant="danger">Book Now</Button>
+                            <div className="">
+                                <Button variant="primary">BOOK Now</Button>
+                                <Button variant="danger">Cancel</Button>
+                            </div>
                         </Card.Body>
                     </Card>
                 </div>

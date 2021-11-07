@@ -8,8 +8,8 @@ const Login = () => {
     const { signInWithGoogle, setUser, loginWithEmailAndPassword, setIsLoading } = useAuth();
 
     const history = useHistory()
-    const location = useLocation()
-    const url = location.state?.from || "/home"
+
+    const url = "/home"
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -28,7 +28,6 @@ const Login = () => {
             .then((res) => {
                 setIsLoading(true)
                 setUser(res.user);
-                console.log(res.user)
                 history.push(url)
             })
             .catch((error) => {

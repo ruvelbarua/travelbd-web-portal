@@ -13,9 +13,11 @@ const Users = () => {
             <h2>This is Users Data:{users.length}</h2>
             <div>
                 {
-                    users.map(user => <li
-                        key={user._id}
-                    >{user.name}:: {user.email}</li>)
+                    users.map(user => <div key={user._id}>
+                        <h4>Name:{user.name}</h4>
+                        <h5>Email:{user.email}</h5>
+                    </div>
+                    )
                 }
             </div>
         </div>

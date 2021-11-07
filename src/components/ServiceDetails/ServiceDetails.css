@@ -1,3 +1,7 @@
-.pkg-card{
-    margin-right: 40px;
+.tour-card{
+    width: 310px;
+    height: 250px;
+}
+.text-place{
+    color:darkgoldenrod
 }

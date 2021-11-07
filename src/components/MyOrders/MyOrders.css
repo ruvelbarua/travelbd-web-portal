@@ -1,0 +1,11 @@
+.add-user form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.add-user form input, textarea, select{
+    width: 30%;
+    margin-bottom: 5px;
+}

@@ -33,12 +33,10 @@ const useFirebase = () => {
     }
 
     const createAccountWithGoogle = (email, password) => {
-        console.log(email, password)
         return createUserWithEmailAndPassword(auth, email, password)
     }
 
     const loginWithEmailAndPassword = (email, password) => {
-        console.log(email, password)
         return signInWithEmailAndPassword(auth, email, password)
     }
 
