@@ -7,9 +7,11 @@ import './Login.css';
 const Login = () => {
     const { signInWithGoogle, setUser, loginWithEmailAndPassword, setIsLoading } = useAuth();
 
-    const history = useHistory()
+    const location = useLocation();
+    const history = useHistory();
 
-    const url = "/home"
+    const url = location.state?.from || "/"
+    // const url = "/"
 
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
@@ -19,6 +21,19 @@ const Login = () => {
     }
     const handleGetPassword = (e) => {
         setPassword(e.target.value);
+    }
+
+    const handleGoogleLogin = () => {
+        signInWithGoogle()
+            .then((res) => {
+                setIsLoading(true)
+                setUser(res.user)
+                history.push(url)
+            })
+            .catch((error) => {
+                console.log(error.message);
+            })
+            .finally(() => setIsLoading(false));
     }
 
     const handleLoginWithEmailAndPassword = (e) => {
@@ -38,19 +53,6 @@ const Login = () => {
                 setIsLoading(false)
             })
     }
-
-    const handleGoogleLogin = () => {
-        signInWithGoogle()
-            .then((res) => {
-                setIsLoading(true)
-                setUser(res.user)
-                history.push(url)
-            })
-            .catch((err) => console.log(err))
-            .finally(() => {
-                setIsLoading(false)
-            })
-    };
 
     return (
         <div className="my-5">

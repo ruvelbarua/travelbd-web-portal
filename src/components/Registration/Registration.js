@@ -12,7 +12,7 @@ const Registration = () => {
 
     const history = useHistory()
     const location = useLocation()
-    const url = location.state?.from || "/home"
+    const url = location.state?.from || "/"
 
     const [name, setName] = useState("")
     const [email, setEmail] = useState("")
