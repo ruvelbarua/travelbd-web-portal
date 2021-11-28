@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="col-md-4 my-5 text-light">
-                    <h5>We Accept Card:</h5>
+                    <h5>We Accept This Cards:</h5>
                     <img className="master-card" src={Cimg} alt="" />
                 </div>
                 <div className="col-md-4">
